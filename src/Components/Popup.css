@@ -1,0 +1,57 @@
+.popup {
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.popup-content {
+    height: auto;
+    width: 400px;
+    background-color: white;
+    padding: 20px;
+    border: 2px solid black;
+    border-radius: 5px;
+    position: relative;
+    box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    animation: fade;
+    animation-duration: 1s;
+
+}
+
+.close {
+    color: red;
+    cursor: pointer;
+    font-size: 25px;
+    transition: all 0.5s;
+
+}
+
+.close:hover {
+    color: darkred;
+
+}
+
+.popup-msg {
+    color: firebrick;
+    font-size: 20px;
+
+}
+
+@keyframes fade {
+    form {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}

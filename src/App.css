@@ -1,0 +1,123 @@
+.form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  height: auto;
+  background-color: black;
+  border-radius: 10px;
+  box-shadow: 0px 30px 60px rgba(0, 0, 0);
+}
+
+.form h1 {
+  text-align: center;
+  padding: 0 0 20px 0;
+  text-decoration: underline;
+  color: white;
+
+}
+
+.form form {
+  padding: 0 40px;
+
+}
+
+.form .text_field {
+  position: relative;
+  border-bottom: 2px solid lightgray;
+  margin: 30px 0;
+
+}
+
+.text_field input {
+  width: 100%;
+  padding: 0 5px;
+  height: 40px;
+  font-size: 18px;
+  border: none;
+  background: none;
+  color: white;
+  outline: none;
+
+}
+
+.text_field textarea {
+  width: 100%;
+  padding: 0 5px;
+  outline: none;
+  height: 100px;
+  font-size: 18px;
+  border: none;
+  background: none;
+  color: white;
+  resize: none;
+}
+
+.text_field label {
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  color: darkslateblue;
+  transform: translateY(-50%);
+  font-size: 18px;
+  pointer-events: none;
+  transition: all 0.5s;
+
+}
+
+.text_field span::before {
+  content: '';
+  position: absolute;
+  width: 50%;
+  height: 2px;
+  top: 40px;
+  left: 0;
+  background-color: darkblue;
+  transition: all 0.5s;
+
+}
+
+.text_field input:focus~label,
+.text_field input:valid~label {
+  top: -5px;
+}
+
+.text_field input:focus~span::before,
+.text_field input:valid~span::before {
+  width: 100%;
+}
+
+.text_field textarea:focus~label,
+.text_field textarea:valid~label {
+  top: -15px;
+
+}
+
+.text_field textarea:focus~span::before,
+.text_field textarea:valid~span::before {
+  width: 100%;
+}
+
+.button {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.button button[type=submit] {
+  padding: 8px;
+  width: 80px;
+  color: white;
+  background-color: rgba(0, 0, 255, 0.315);
+  outline: none;
+  border: none;
+  transition: all 0.5s;
+  font-weight: bold;
+
+}
+
+.button button[type=submit]:hover {
+  background-color: rgb(230, 14, 14);
+  cursor: pointer;
+
+}
